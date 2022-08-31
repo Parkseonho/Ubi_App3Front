@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./index.css";
-import TodoInput from "./components/TodoInput";
-import TodoList from "./components/TodoList";
+import HomePage from "./components/HomePage";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import axios from "axios";
 
 function App() {
@@ -23,9 +24,12 @@ function App() {
   const nextId = useRef(4);
 
   return (
-    <div className="max-w-4xl mx-auto mt-4">
-      <TodoInput todos={todos} setTodos={setTodos} nextId={nextId} />
-      <TodoList todos={todos} />
+    <div className="max-w-4xl mx-auto">
+      <Header/>
+      <div className="max-w-4xl mx-auto my-4">
+      <HomePage/>
+      </div>
+      <Footer/>
     </div>
   );
 }
