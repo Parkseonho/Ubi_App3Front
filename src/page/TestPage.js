@@ -8,8 +8,6 @@ import "../index.css";
 const TestPage = () => {
   return (
     <div className="max-w-4xl mx-auto">
-      <Header/>
-      <HomePage/>
       <RouteTest />
     </div>
   );

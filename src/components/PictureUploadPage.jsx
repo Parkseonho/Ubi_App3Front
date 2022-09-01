@@ -2,7 +2,9 @@ import React from "react";
 
 const PictureUploadPage = () => {
     return (
-      <div >
+      <div style={{
+        height: 690
+      }} >
           PictureUploadPage
       </div>
     );
