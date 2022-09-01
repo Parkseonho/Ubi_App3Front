@@ -1,3 +1,5 @@
+
+/*
 import React, { useEffect, useRef, useState } from "react";
 import "./index.css";
 import HomePage from "./components/HomePage";
@@ -9,7 +11,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    /**API 호출 코드*/
+    API 호출 코드
     const getData = async () => {
       const todos = await axios({
         url: "http://localhost:8083/todos",
@@ -35,3 +37,4 @@ function App() {
 }
 
 export default App;
+*/
