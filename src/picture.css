@@ -1,0 +1,10 @@
+.PicturePostSize{
+    min-height: 500px;
+    max-height: 500px;
+}
+
+.PicturePostImgSize{
+    background-color: rgb(219, 219, 219);
+    min-height: 300px;
+    max-height: 300px;
+}
