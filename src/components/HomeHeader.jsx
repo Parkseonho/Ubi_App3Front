@@ -1,7 +1,7 @@
 import React from "react";
 import ubi from './picture/ubi.png';
 
-const Header = () => {
+const HomeHeader = () => {
     return (
         <>
         <div
@@ -15,5 +15,5 @@ const Header = () => {
         </>
     );
   }
-export default Header;
+export default HomeHeader;
 

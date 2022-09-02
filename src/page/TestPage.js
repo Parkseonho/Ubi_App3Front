@@ -1,5 +1,3 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from '../components/Header';
 import HomePage from '../components/HomePage';
 import RouteTest from '../components/RouteTest';
 import "../index.css";

@@ -7,10 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <div style={{
-      height: 690
-    }} >
- 
+    <div className="PageHeight">
       <img src={accountList} alt="accountList" className='mx-auto mt-4' />
       <img src={photo} alt="photo" className='mx-auto mt-4' />
       <img src={calendar} alt="calendar" className='mx-auto mt-4' />
