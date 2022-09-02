@@ -3,25 +3,24 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Home from "../page/Home";
 import PictureList from "../page/Picture/PictureList";
 import PictureUpload from "../page/Picture/PictureUpload";
-import home from './picture/home.png';
-import person from './picture/person.png';
-import threeLine from './picture/threeLine.png';
+import PictureMain from "../page/Picture/PictureMain";
 
 
 const RouteTest = () => {
   return (
     <BrowserRouter>
-      <nav className='flex justify-around items-center'>  
+      <nav className=' m-auto flex justify-around'>  
         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureList'>
-        <img src={threeLine} alt="threeLine" className='inline h-8 w-10 ' />
-      
+        PList    
         </NavLink>
         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/'>
-        <img src={home} alt="home" className='inline h-10 w-10' />
-   
+        Main
         </NavLink>
         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureUpload'>
-        <img src={person} alt="person" className='inline h-10 w-10' />
+        PUpload
+        </NavLink>
+        <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureMain'>
+        PMain
         </NavLink>
       </nav>
 
@@ -29,6 +28,7 @@ const RouteTest = () => {
         <Route exact path='/' element={<Home />} />
         <Route path='/PictureList' element={<PictureList />} />
         <Route path='/PictureUpload' element={<PictureUpload />} />
+        <Route path='/PictureMain' element={<PictureMain />} />
       </Routes>
     </BrowserRouter>
   );
