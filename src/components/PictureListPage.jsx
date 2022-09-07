@@ -1,11 +1,11 @@
-import React from "react";
 import "../index.css"
 import "../picture.css"
 import threedots from "../components/picture/threedots.png";
 import ggosom1 from "../components/picture/ggosom1.jpg";
 import heart from "../components/picture/heart.png";
+import PictureListPost from "./PictureListPost";
 
-const PictureListPage = () => {
+const PictureListPage = ({ post }) => {
   return (
     <>
       <div
@@ -21,7 +21,7 @@ const PictureListPage = () => {
           {/* 게시물 상단 */}
           <div className="border tabs place-content-between py-2 ">
             <nav className="tabs ml-2">
-              <img class="mask mask-circle h-14 w-14" src="https://placeimg.com/160/160/arch" />
+              <img className="mask mask-circle h-14 w-14" src="https://placeimg.com/160/160/arch" />
               <p>우비</p>
             </nav>
             <button className="my-auto btn glass mr-5">
@@ -36,7 +36,11 @@ const PictureListPage = () => {
           <div >
               <img src={heart} alt="heart" className="block ml-auto m-3" />
             <div className="mx-3">
-              냐애애애애          
+            {post&&post.map((content) => (
+            <PictureListPost
+            content={content}
+            />
+          ))}
            
             </div>
           
