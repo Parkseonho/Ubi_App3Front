@@ -2,10 +2,12 @@ import "../index.css"
 import "../picture.css"
 import threedots from "../components/picture/threedots.png";
 import ggosom1 from "../components/picture/ggosom1.jpg";
+import noheart from "../components/picture/noHeart.png"
 import heart from "../components/picture/heart.png";
 import PictureListPost from "./PictureListPost";
+import React, {useState, useEffect} from "react";
 
-const PictureListPage = ({ post }) => {
+const PictureListPage = ({ post, like, onCilck }) => {
   return (
     <>
       <div
@@ -34,7 +36,7 @@ const PictureListPage = ({ post }) => {
           </div>
           {/* 게시물 내용 */}
           <div >
-              <img src={heart} alt="heart" className="block ml-auto m-3" />
+              <img src={like?heart:noheart} alt="heart" className="block ml-auto m-3" />
             <div className="mx-3">
             {post&&post.map((content) => (
             <PictureListPost
