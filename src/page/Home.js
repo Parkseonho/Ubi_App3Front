@@ -3,12 +3,11 @@ import accountList from '../components/picture/accountList.svg';
 import calendar from '../components/picture/calendar.svg';
 import photo from '../components/picture/photo.svg';
 import React from "react";
-import Footer from "../components/Footer";
 import HomeHeader from "../components/HomeHeader";
 
 function Home({ posts, setPosts, nextId }) {
   return (
-    <div className="max-w-4xl mx-auto my-4">
+    <div className="max-w-4xl mx-auto my-4 MarginBottom">
       <HomeHeader />
       <div className="max-w-4xl mx-auto my-4">
 
@@ -20,7 +19,6 @@ function Home({ posts, setPosts, nextId }) {
         </div>
 
       </div>
-      <Footer />
     </div>
   );
 }

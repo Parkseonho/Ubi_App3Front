@@ -6,3 +6,15 @@
     min-height: 690px;
     max-height: 690px;
 }
+
+.RouteXY{
+  position: fixed;
+  bottom: 0px;
+  background-color: #CCF2F4;
+  height: 60px;
+  width: 100%;
+}
+
+.MarginBottom{
+    margin-bottom: 80px;
+}

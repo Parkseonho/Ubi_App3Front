@@ -1,5 +1,4 @@
 import PictureListPage from "../../components/PicturePage/PictureListPage";
-import Footer from "../../components/Footer";
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 
@@ -21,11 +20,10 @@ function PictureList() {
   }, []);
   const nextId = useRef(4);
   return (
-    <div className="max-w-4xl mx-auto my-4">
+    <div className="max-w-4xl mx-auto my-4 MarginBottom">
       <div className="max-w-4xl mx-auto my-4">
         <PictureListPage posts={posts} setPosts={setPosts}/>
       </div>
-      <Footer />
     </div>
   );
 }
