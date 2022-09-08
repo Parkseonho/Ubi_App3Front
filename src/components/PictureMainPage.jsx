@@ -15,8 +15,8 @@ const PictureMainPage = () => {
             </div>
             <div className="PageHeight">
                 {/** select */}
-                <div>
-                    <select class="border select-sm max-w-xs w-2/4 text-center">
+                <div className="w-full">
+                    <select class="border select-sm  w-2/4  text-center">
                         <option disabled selected>2022.08</option>
                         <option>2022.01</option>
                         <option>2022.02</option>
@@ -31,7 +31,7 @@ const PictureMainPage = () => {
                         <option>2022.11</option>
                         <option>2022.12</option>
                     </select>
-                    <select class="border select-sm max-w-xs w-2/4 text-center">
+                    <select class="border select-sm w-2/4 text-center">
                         <option disabled selected>우비</option>
                         <option>꼬솜</option>
                     </select>

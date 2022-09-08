@@ -6,7 +6,7 @@ import PictureUpload from "../page/Picture/PictureUpload";
 import PictureMain from "../page/Picture/PictureMain";
 
 
-const RouteTest = () => {
+const RouteTest = ({posts, setPosts, nextId}) => {
   return (
     <BrowserRouter>
       <nav className=' m-auto flex justify-around'>  
@@ -25,9 +25,9 @@ const RouteTest = () => {
       </nav>
 
       <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route path='/PictureList' element={<PictureList />} />
-        <Route path='/PictureUpload' element={<PictureUpload />} />
+        <Route exact path='/' element={<Home />}  />
+        <Route path='/PictureList' element={<PictureList />} posts={posts} setPosts={setPosts}  />
+        <Route path='/PictureUpload' element={<PictureUpload/> }posts={posts} setPosts={setPosts} nextId = {nextId} />
         <Route path='/PictureMain' element={<PictureMain />} />
       </Routes>
     </BrowserRouter>

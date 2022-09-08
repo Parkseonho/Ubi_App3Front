@@ -7,7 +7,7 @@ import heart from "../components/picture/heart.png";
 import PictureListPost from "./PictureListPost";
 import React, {useState, useEffect} from "react";
 
-const PictureListPage = ({ post, like, onCilck }) => {
+const PictureListPage = ({ posts, setPosts }) => {
   return (
     <>
       <div
@@ -18,36 +18,16 @@ const PictureListPage = ({ post, like, onCilck }) => {
         }} >
         <strong>게시물</strong>
       </div>
-      <div className="PageHeight">
-        <div className="border PicturePostSize" >
-          {/* 게시물 상단 */}
-          <div className="border tabs place-content-between py-2 ">
-            <nav className="tabs ml-2">
-              <img className="mask mask-circle h-14 w-14" src="https://placeimg.com/160/160/arch" />
-              <p>우비</p>
-            </nav>
-            <button className="my-auto btn glass mr-5">
-              <img src={threedots} alt="threedots" className='h-7 w-2 my-auto' />
-            </button>
-          </div>
-          {/* 게시물 사진부분 */}
-          <div className="border PicturePostImgSize" >
-            <img src={ggosom1} alt="ggosom1" className='mx-auto pb-0.5 PicturePostImgSize ' />
-          </div>
-          {/* 게시물 내용 */}
-          <div >
-              <img src={like?heart:noheart} alt="heart" className="block ml-auto m-3" />
-            <div className="mx-3">
-            {post&&post.map((content) => (
+      <div className="PageHeight overflow-auto">
+        
+            {posts&&posts.map((post, index) => (
             <PictureListPost
-            content={content}
+            key = {index}
+            post = {post}
             />
           ))}
-           
-            </div>
-          
-          </div>
-        </div>
+         
+      
       </div>
     </>
   );
