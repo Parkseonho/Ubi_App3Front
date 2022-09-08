@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 .PageHeight{
-    min-height: 690px;
-    max-height: 690px;
+    min-height: 720px;
+    max-height: 720px;
+    margin-bottom: 80px;
 }
 
 .RouteXY{
@@ -17,4 +18,10 @@
 
 .MarginBottom{
     margin-bottom: 80px;
+}
+
+.HeaderSetting{
+    
+    background-color: #CCF2F4;
+    height: 60px;
 }

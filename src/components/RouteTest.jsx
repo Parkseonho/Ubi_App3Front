@@ -13,6 +13,10 @@ import threeLine from './picture/threeLine.png';
 
 const RouteTest = ({ posts, setPosts, nextId }) => {
   return (
+    <>
+    <div className="HeaderSetting">
+
+    </div>
     <BrowserRouter>
       <nav className='RouteXY flex justify-around items-center'>
         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureList'>
@@ -21,12 +25,12 @@ const RouteTest = ({ posts, setPosts, nextId }) => {
         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/'>
           <img src={home} alt="home" className='inline h-10 w-10' />
         </NavLink>
-       {/*  <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureUpload'>
-        
+        <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureUpload'>
+        업로드
         </NavLink>
       <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureMain'>
           PMain
-        </NavLink>*/} 
+        </NavLink>
         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/AccountMain'>
         <img src={person} alt="person" className='inline h-10 w-10' />
         </NavLink>
@@ -40,6 +44,8 @@ const RouteTest = ({ posts, setPosts, nextId }) => {
         <Route path='/AccountMain' element={<AccountMain />} />
       </Routes>
     </BrowserRouter>
+   
+    </>
   );
 }
 

@@ -1,20 +1,15 @@
 import React from "react";
+import "../../index.css"
 
 const PictureMainPage = () => {
 
 
     return (
         <>
-            <div
-                style={{
-                    backgroundColor: "#CCF2F4",
-                    height: 60
 
-                }} >
-                <strong className="text-center justifly-center">사진</strong>
-            </div>
-            <div className="PageHeight">
-                {/** select */}
+            <strong className="absolute inset-x-0 top-0">사진</strong>
+
+            <div className="PageHeight m-0">
                 <div className="w-full">
                     <select class="border select-sm  w-2/4  text-center">
                         <option disabled selected>2022.08</option>
@@ -37,7 +32,7 @@ const PictureMainPage = () => {
                     </select>
                 </div>
                 {/* 사용자 사진 및 이름 */}
-                <div className="my-3 text-center">
+                <div className="my-6 text-center">
                     <img className="mx-auto mask mask-circle h-24" src="https://placeimg.com/160/160/arch" />
                     <div className="mt-2">
                         <strong>
@@ -45,11 +40,8 @@ const PictureMainPage = () => {
                         </strong>
                     </div>
                 </div>
+
                 {/* 사용자 사진 및 이름 */}
-                <div className="text-center my-3">
-                    <img class="inline mask mask-square mx-2 " src="https://placeimg.com/160/160/arch" />
-                    <img class="inline mask mask-square mx-2 " src="https://placeimg.com/160/160/arch" />
-                </div>
                 <div className="text-center my-3">
                     <img class="inline mask mask-square mx-2 " src="https://placeimg.com/160/160/arch" />
                     <img class="inline mask mask-square mx-2 " src="https://placeimg.com/160/160/arch" />

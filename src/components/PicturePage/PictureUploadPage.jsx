@@ -6,13 +6,8 @@ const PictureUploadPage = ({ post, setPost, nextId}) => {
   const [content, setContent] = useState("");
   return (
     <>
-      <div
-        style={{
-          backgroundColor: "#CCF2F4",
-          height: 60
-
-        }} >
-        <strong> 사진 업로드 </strong>
+      <div>
+        <strong className="absolute inset-x-0 top-0"> 사진 업로드 </strong>
       </div>
 
       {/* 내용 */}

@@ -6,15 +6,10 @@ import React from "react";
 const PictureListPage = ({ posts, setPosts }) => {
   return (
     <>
-      <div
-        style={{
-          backgroundColor: "#CCF2F4",
-          height: 60
-
-        }} >
+      <div className="absolute inset-x-0 top-0">
         <strong>게시물</strong>
       </div>
-      <div className="PageHeight overflow-auto">
+      <div className="PageHeight overflow-auto ">
         
             {posts&&posts.map((post, index) => (
             <PictureListPost

@@ -8,7 +8,7 @@ const TestPage = () => {
 
 
   return (
-    <div >
+    <div className='HeaderSetting'>
      {/* <Home posts={posts} setPosts={setPosts} nextId={nextId}/>*/}
       <RouteTest />
     </div>
