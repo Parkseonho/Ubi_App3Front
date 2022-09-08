@@ -11,7 +11,7 @@ const PictureMainPage = () => {
 
             <div className="PageHeight m-0">
                 <div className="w-full">
-                    <select class="border select-sm  w-2/4  text-center">
+                    <select className="border select-sm  w-2/4  text-center">
                         <option disabled selected>2022.08</option>
                         <option>2022.01</option>
                         <option>2022.02</option>
@@ -26,7 +26,7 @@ const PictureMainPage = () => {
                         <option>2022.11</option>
                         <option>2022.12</option>
                     </select>
-                    <select class="border select-sm w-2/4 text-center">
+                    <select className="border select-sm w-2/4 text-center">
                         <option disabled selected>우비</option>
                         <option>꼬솜</option>
                     </select>
@@ -43,12 +43,12 @@ const PictureMainPage = () => {
 
                 {/* 사용자 사진 및 이름 */}
                 <div className="text-center my-3">
-                    <img class="inline mask mask-square mx-2 " src="https://placeimg.com/160/160/arch" />
-                    <img class="inline mask mask-square mx-2 " src="https://placeimg.com/160/160/arch" />
+                    <img className="inline mask mask-square mx-2 " src="https://placeimg.com/160/160/arch" />
+                    <img className="inline mask mask-square mx-2 " src="https://placeimg.com/160/160/arch" />
                 </div>
                 <div className="text-center my-3">
-                    <img class="inline mask mask-square mx-2 " src="https://placeimg.com/160/160/arch" />
-                    <img class="inline mask mask-square mx-2 " src="https://placeimg.com/160/160/arch" />
+                    <img className="inline mask mask-square mx-2 " src="https://placeimg.com/160/160/arch" />
+                    <img className="inline mask mask-square mx-2 " src="https://placeimg.com/160/160/arch" />
                 </div>
             </div>
         </>

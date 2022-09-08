@@ -1,6 +1,7 @@
 import React from "react";
 import Doughnut from "./Doughnut";
 
+
 function AccountMain() {
     return (
         <div className="max-w-4xl mx-auto MarginBottom" >
@@ -17,8 +18,8 @@ function AccountMain() {
                         <Doughnut />
                     </div>
                 </div>
-
-
+                
+            
             </div>
         </div>
     );
