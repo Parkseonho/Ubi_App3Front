@@ -1,4 +1,5 @@
 import React from "react";
+import Doughnut from "./Doughnut";
 
 function AccountMain() {
     return (
@@ -12,7 +13,9 @@ function AccountMain() {
                         <button className="py-2 btn-outline w-2/4">지출내역</button>
                         <button className="py-2 btn-outline w-2/4">예산관리</button>
                     </div>
-
+                    <div>
+                        <Doughnut />
+                    </div>
                 </div>
 
 
