@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../index.css"
+import "../../index.css"
 import axios from "axios";
 
 const PictureUploadPage = ({ post, setPost, nextId}) => {

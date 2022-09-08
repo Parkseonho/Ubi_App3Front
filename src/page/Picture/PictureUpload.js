@@ -1,4 +1,4 @@
-import PictureUploadPage from "../../components/PictureUploadPage";
+import PictureUploadPage from "../../components/PicturePage/PictureUploadPage";
 import Footer from "../../components/Footer";
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
@@ -22,7 +22,7 @@ function PictureUpload() {
   return (
     <div className="max-w-4xl mx-auto my-4">
       <div className="max-w-4xl mx-auto my-4">
-        <PictureUploadPage />
+        <PictureUploadPage posts={posts} setPosts={setPosts} nextId={nextId}/>
       </div>
       <Footer />
     </div>

@@ -1,4 +1,4 @@
-import PictureListPage from "../../components/PictureListPage";
+import PictureListPage from "../../components/PicturePage/PictureListPage";
 import Footer from "../../components/Footer";
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";

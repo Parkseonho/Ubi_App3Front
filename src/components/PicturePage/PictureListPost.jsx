@@ -1,7 +1,7 @@
 import React from "react";
-import heart from "../components/picture/heart.png";
-import threedots from "../components/picture/threedots.png";
-import ggosom1 from "../components/picture/ggosom1.jpg";
+import heart from "../picture/heart.png";
+import threedots from "../picture/threedots.png";
+import ggosom1 from "../picture/ggosom1.jpg";
 
 const PictureListPost = ({ post }) => {
     const { content } = post;

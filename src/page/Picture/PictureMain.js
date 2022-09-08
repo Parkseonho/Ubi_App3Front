@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../../components/Footer";
-import PictureMainPage from "../../components/PictureMainPage";
+import PictureMainPage from "../../components/PicturePage/PictureMainPage";
 
 function PictureMain() {
   return (

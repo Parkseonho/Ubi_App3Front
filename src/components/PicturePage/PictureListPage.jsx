@@ -1,11 +1,7 @@
-import "../index.css"
-import "../picture.css"
-import threedots from "../components/picture/threedots.png";
-import ggosom1 from "../components/picture/ggosom1.jpg";
-import noheart from "../components/picture/noHeart.png"
-import heart from "../components/picture/heart.png";
+import "../../index.css"
+import "../../picture.css"
 import PictureListPost from "./PictureListPost";
-import React, {useState, useEffect} from "react";
+import React from "react";
 
 const PictureListPage = ({ posts, setPosts }) => {
   return (
