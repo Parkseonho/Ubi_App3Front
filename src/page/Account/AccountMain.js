@@ -1,5 +1,10 @@
 import React from "react";
 import Doughnut from "./Doughnut";
+import stress from "../../components/picture/stress.svg"
+import food from "../../components/picture/food.svg"
+import hospital from "../../components/picture/hospital.svg"
+import toiletries from "../../components/picture/toiletries.svg"
+import other from "../../components/picture/other.svg"
 
 
 function AccountMain() {
@@ -17,9 +22,14 @@ function AccountMain() {
                     <div>
                         <Doughnut />
                     </div>
+
+
+                    <img src={stress} alt="stress" className='mx-auto  ' />
+                    <img src={food} alt="food" className='mx-auto  ' />
+                    <img src={hospital} alt="hospital" className='mx-auto ' />
+                    <img src={toiletries} alt="toiletries" className='mx-auto ' />
+                    <img src={other} alt="other" className='mx-auto ' />
                 </div>
-                
-            
             </div>
         </div>
     );
