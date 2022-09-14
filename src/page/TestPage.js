@@ -1,14 +1,12 @@
 import RouteTest from '../components/RouteTest';
 import "../index.css";
-import React, { useEffect, useRef, useState } from "react";
-import axios from "axios";
-import Home from './Home';
+import React from "react";
 
 const TestPage = () => {
 
 
   return (
-    <div className='HeaderSetting'>
+    <div >
      {/* <Home posts={posts} setPosts={setPosts} nextId={nextId}/>*/}
       <RouteTest />
     </div>

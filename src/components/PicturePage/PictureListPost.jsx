@@ -1,10 +1,12 @@
 import React from "react";
-import heart from "../picture/heart.png";
 import threedots from "../picture/threedots.png";
 import ggosom1 from "../picture/ggosom1.jpg";
+import axios from "axios";
+import { HeartOutlined, HeartFilled } from '@ant-design/icons';
 
-const PictureListPost = ({ post }) => {
-    const { content } = post;
+
+const PictureListPost = ({ post, setPost }) => {
+    const { content, replyLike, id } = post;
     return (
         <>
             <div className="border PicturePostSize my-2" >
@@ -24,8 +26,19 @@ const PictureListPost = ({ post }) => {
                 </div>
                 {/* 게시물 내용 */}
                 <div >
-                    <img src={heart} alt="heart" className="block ml-auto m-3" />
+                    <div
+                        onClick={async () => {
+                            const data = await axios({
+                                url: 'http://localhost:8083/multi-file/${id}',
+                                method: "PATCH",
+                            });
+                            setPost(!data.replyLike);
+                        }} >
+                        {replyLike ? <HeartFilled /> : <HeartOutlined />}
+                    </div>
+
                     <div className="mx-3">
+
                     </div>
                     {content}
 
