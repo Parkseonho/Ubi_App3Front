@@ -7,8 +7,20 @@ import { HeartOutlined, HeartFilled } from '@ant-design/icons';
 
 const PictureListPost = ({ post, setPost }) => {
     const { content, replyLike, id } = post;
+
+    
+    const replyLikeClick = () => {
+        const data = axios({
+            url: 'http://localhost:8083/multi-file/${id}',
+            method: "PATCH",
+        });
+        replyLike?setPost(!data.replyLike):setPost(!data.replyLike);
+       
+
+    }
+   
     return (
-        <>
+        <React.Fragment>
             <div className="border PicturePostSize my-2" >
                 {/* 게시물 상단 */}
                 <div className="border tabs place-content-between py-2 ">
@@ -26,15 +38,12 @@ const PictureListPost = ({ post, setPost }) => {
                 </div>
                 {/* 게시물 내용 */}
                 <div >
-                    <div
-                        onClick={async () => {
-                            const data = await axios({
-                                url: 'http://localhost:8083/multi-file/${id}',
-                                method: "PATCH",
-                            });
-                            setPost(!data.replyLike);
-                        }} >
-                        {replyLike ? <HeartFilled /> : <HeartOutlined />}
+                    <div>
+                        {replyLike ? 
+                        <HeartFilled 
+                        onClick={replyLikeClick} /> : 
+                        <HeartOutlined 
+                        onClick={replyLikeClick} />}
                     </div>
 
                     <div className="mx-3">
@@ -48,7 +57,7 @@ const PictureListPost = ({ post, setPost }) => {
 
 
 
-        </>
+        </React.Fragment>
 
     );
 };
