@@ -15,6 +15,7 @@ const PictureListPage = ({ posts, setPosts }) => {
             <PictureListPost
             key = {index}
             post = {post}
+            setPosts={setPosts}
             />
           ))}
          

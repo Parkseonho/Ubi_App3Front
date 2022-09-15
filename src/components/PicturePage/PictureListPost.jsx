@@ -3,22 +3,23 @@ import threedots from "../picture/threedots.png";
 import ggosom1 from "../picture/ggosom1.jpg";
 import axios from "axios";
 import { HeartOutlined, HeartFilled } from '@ant-design/icons';
+import LikeButton from "./PictureHeart";
+import { useEffect } from "react";
 
 
-const PictureListPost = ({ post, setPost }) => {
+const PictureListPost = ({ post, setPosts }) => {
     const { content, replyLike, id } = post;
 
+   const toggleLike = async (e) =>{
+       const data = await axios({
+        method: "PATCH",
+        url:  `http://localhost:8083/multi-file/${id}`,
+        data: {replyLike},
+    });
+     setPosts(data.data);
+   }
     
-    const replyLikeClick = () => {
-        const data = axios({
-            url: 'http://localhost:8083/multi-file/${id}',
-            method: "PATCH",
-        });
-        replyLike?setPost(!data.replyLike):setPost(!data.replyLike);
-       
-
-    }
-   
+  
     return (
         <React.Fragment>
             <div className="border PicturePostSize my-2" >
@@ -38,12 +39,13 @@ const PictureListPost = ({ post, setPost }) => {
                 </div>
                 {/* 게시물 내용 */}
                 <div >
+              
                     <div>
                         {replyLike ? 
                         <HeartFilled 
-                        onClick={replyLikeClick} /> : 
+                        onClick={toggleLike} /> : 
                         <HeartOutlined 
-                        onClick={replyLikeClick} />}
+                        onClick={toggleLike} />}
                     </div>
 
                     <div className="mx-3">
