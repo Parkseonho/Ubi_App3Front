@@ -43,9 +43,11 @@ const PictureListPost = ({ post, setPosts }) => {
                     <div>
                         {replyLike ? 
                         <HeartFilled 
-                        onClick={toggleLike} /> : 
+                        onClick={toggleLike}
+                        style={{ color: 'red', fontSize: '30px'}} /> : 
                         <HeartOutlined 
-                        onClick={toggleLike} />}
+                        onClick={toggleLike} 
+                        style={{ color: 'red', fontSize: '30px'}}/>}
                     </div>
 
                     <div className="mx-3">
