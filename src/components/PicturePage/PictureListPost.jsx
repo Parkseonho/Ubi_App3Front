@@ -1,25 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
 import threedots from "../picture/threedots.png";
 import ggosom1 from "../picture/ggosom1.jpg";
 import axios from "axios";
 import { HeartOutlined, HeartFilled } from '@ant-design/icons';
-import LikeButton from "./PictureHeart";
-import { useEffect } from "react";
+import MyModal from "./MyModal";
 
 
 const PictureListPost = ({ post, setPosts }) => {
     const { content, replyLike, id } = post;
 
-   const toggleLike = async (e) =>{
-       const data = await axios({
-        method: "PATCH",
-        url:  `http://localhost:8083/multi-file/${id}`,
-        data: {replyLike},
-    });
-     setPosts(data.data);
-   }
-    
-  
+    const toggleLike = async (e) => {
+        const data = await axios({
+            method: "PATCH",
+            url: `http://localhost:8083/multi-file/${id}`,
+            data: { replyLike },
+        });
+        setPosts(data.data);
+    }
+
+    const PictureListPost = () => {
+        const [isOpen, setOpen] = useState(false);
+        const handleClick = () => {
+  setOpen(true);
+        }
+    }
+
+
     return (
         <React.Fragment>
             <div className="border PicturePostSize my-2" >
@@ -29,25 +35,27 @@ const PictureListPost = ({ post, setPosts }) => {
                         <img className="mask mask-circle h-14 w-14" src="https://placeimg.com/160/160/arch" />
                         <p>우비</p>
                     </nav>
-                    <button className="my-auto btn glass mr-5">
+                    <button className="App my-auto btn glass mr-5" onClick={handleClick}>
                         <img src={threedots} alt="threedots" className='h-7 w-2 my-auto' />
+                        <MyModal isOpen={isOpen} />
                     </button>
                 </div>
                 {/* 게시물 사진부분 */}
                 <div className="border PicturePostImgSize" >
                     <img src={ggosom1} alt="ggosom1" className='mx-auto pb-0.5 PicturePostImgSize ' />
+                   
                 </div>
                 {/* 게시물 내용 */}
                 <div >
-              
+
                     <div>
-                        {replyLike ? 
-                        <HeartFilled 
-                        onClick={toggleLike}
-                        style={{ color: 'red', fontSize: '30px'}} /> : 
-                        <HeartOutlined 
-                        onClick={toggleLike} 
-                        style={{ color: 'red', fontSize: '30px'}}/>}
+                        {replyLike ?
+                            <HeartFilled
+                                onClick={toggleLike}
+                                style={{ color: 'red', fontSize: '30px' }} /> :
+                            <HeartOutlined
+                                onClick={toggleLike}
+                                style={{ color: 'red', fontSize: '30px' }} />}
                     </div>
 
                     <div className="mx-3">
