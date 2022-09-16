@@ -9,6 +9,7 @@ import "../index.css"
 import home from './picture/home.png';
 import person from './picture/person.png';
 import threeLine from './picture/threeLine.png';
+import MainCalenderPage from "../page/Calendar/MainCalendarPage";
 
 
 const RouteTest = ({ posts, setPosts, nextId }) => {
@@ -37,6 +38,7 @@ const RouteTest = ({ posts, setPosts, nextId }) => {
         <Route path='/PictureUpload' element={<PictureUpload />} posts={posts} setPosts={setPosts} nextId={nextId} />
         <Route path='/PictureMain' element={<PictureMain />} />
         <Route path='/AccountMain' element={<AccountMain />} />
+        <Route path='/MainCalenderPage' element={<MainCalenderPage />} />
       </Routes>
     </BrowserRouter>
    

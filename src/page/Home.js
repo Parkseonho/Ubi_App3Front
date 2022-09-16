@@ -19,7 +19,7 @@ function Home() {
           <Link to="/PictureMain" className='mx-auto mt-4' >
             <img src={photo} alt="photo" className='mx-auto mt-4' />
           </Link>
-          <Link to="/" className='mx-auto mt-4' >
+          <Link to="/MainCalenderPage" className='mx-auto mt-4' >
             <img src={calendar} alt="calendar" className='mx-auto mt-4' />
           </Link>
 
