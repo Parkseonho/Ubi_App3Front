@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../index.css"
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const PictureUploadPage = ({ post, setPost, nextId }) => {
   const [content, setContent] = useState("");
@@ -20,8 +21,10 @@ const PictureUploadPage = ({ post, setPost, nextId }) => {
               url: "http://localhost:8083/multi-file",
               method: "POST",
               enctyp: "multipart/form-data",
-              data: { content,
-                      files},
+              data: {
+                content,
+                files
+              },
             });
             setPost(data.content, data.files);
             nextId.current++;
@@ -64,8 +67,12 @@ const PictureUploadPage = ({ post, setPost, nextId }) => {
           </div>
           {/* 확인/취소 버튼 */}
           <div>
-            <button class="btn mr-2">취소</button>
-            <button onClick="onSubmit" type="submit" class="btn">확인</button>
+            <Link to="/PictureMain" >
+              <button class="btn mr-2">취소</button>
+            </Link>
+            <Link to="/PictureList" >
+              <button onClick="onSubmit" type="submit" class="btn">확인</button>
+            </Link>
           </div>
         </form>
       </div>
