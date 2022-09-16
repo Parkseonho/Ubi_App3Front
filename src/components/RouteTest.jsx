@@ -25,12 +25,7 @@ const RouteTest = ({ posts, setPosts, nextId }) => {
         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/'>
           <img src={home} alt="home" className='inline h-10 w-10' />
         </NavLink>
-        <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureUpload'>
-        업로드
-        </NavLink>
-      <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureMain'>
-          PMain
-        </NavLink>
+
         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/AccountMain'>
         <img src={person} alt="person" className='inline h-10 w-10' />
         </NavLink>

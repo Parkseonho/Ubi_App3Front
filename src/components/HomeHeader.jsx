@@ -5,7 +5,7 @@ const HomeHeader = () => {
     return (
         <>
         <div>
-           <img src={ubi} alt="ubi" className='absolute mx-auto inset-x-0 top-0 h-14 w-12'/>
+           <img src={ubi} alt="ubi" className='absolute inset-x-0 mx-auto  top-0 h-14 w-12'/>
         </div>
         </>
     );
