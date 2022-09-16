@@ -14,13 +14,13 @@ function Home() {
 
         <div className="PageHeight">
           <Link to="/AccountMain" className='mx-auto mt-4' >
-            <button><img src={accountList} alt="accountList" className='mx-auto mt-4' /></button>
+            <img src={accountList} alt="accountList" className='mx-auto mt-4' />
           </Link>
           <Link to="/PictureMain" className='mx-auto mt-4' >
-            <button> <img src={photo} alt="photo" className='mx-auto mt-4' /></button>
+            <img src={photo} alt="photo" className='mx-auto mt-4' />
           </Link>
           <Link to="/" className='mx-auto mt-4' >
-            <button><img src={calendar} alt="calendar" className='mx-auto mt-4' /></button>
+            <img src={calendar} alt="calendar" className='mx-auto mt-4' />
           </Link>
 
         </div>
