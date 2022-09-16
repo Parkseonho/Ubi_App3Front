@@ -3,7 +3,7 @@ import threedots from "../picture/threedots.png";
 import ggosom1 from "../picture/ggosom1.jpg";
 import axios from "axios";
 import { HeartOutlined, HeartFilled } from '@ant-design/icons';
-import MyModal from "./MyModal";
+
 
 
 const PictureListPost = ({ post, setPosts }) => {
@@ -18,13 +18,6 @@ const PictureListPost = ({ post, setPosts }) => {
         setPosts(data.data);
     }
 
-    const PictureListPost = () => {
-        const [isOpen, setOpen] = useState(false);
-        const handleClick = () => {
-  setOpen(true);
-        }
-    }
-
 
     return (
         <React.Fragment>
@@ -35,9 +28,9 @@ const PictureListPost = ({ post, setPosts }) => {
                         <img className="mask mask-circle h-14 w-14" src="https://placeimg.com/160/160/arch" />
                         <p>우비</p>
                     </nav>
-                    <button className="App my-auto btn glass mr-5" onClick={handleClick}>
+                    <button className="App my-auto btn glass mr-5">
                         <img src={threedots} alt="threedots" className='h-7 w-2 my-auto' />
-                        <MyModal isOpen={isOpen} />
+                        
                     </button>
                 </div>
                 {/* 게시물 사진부분 */}

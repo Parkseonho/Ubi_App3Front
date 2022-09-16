@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "../../index.css"
 import axios from "axios";
 
-const PictureUploadPage = ({ post, setPost, nextId}) => {
+const PictureUploadPage = ({ post, setPost, nextId }) => {
   const [content, setContent] = useState("");
+  const [files, setFiles] = useState("");
   return (
     <>
       <div>
@@ -18,20 +19,25 @@ const PictureUploadPage = ({ post, setPost, nextId}) => {
             const data = await axios({
               url: "http://localhost:8083/multi-file",
               method: "POST",
-              data: { content },
+              enctyp: "multipart/form-data",
+              data: { content,
+                      files},
             });
-            setPost(data.content);
+            setPost(data.content, data.files);
             nextId.current++;
             setContent("");
-          }}          
+            setFiles([]);
+          }}
         >
           {/* 사진/영상 업로드 부분 */}
-          {/*
+
           <div class="form-control w-full max-w-xs">
             <label class="label">
               <strong class="label-text">사진/영상</strong>
             </label>
-            <input type="file"
+            <input
+              multiple="multiple"
+              type="file"
               className="form-control"
               value={files}
               onChange={(e) => {
@@ -39,8 +45,7 @@ const PictureUploadPage = ({ post, setPost, nextId}) => {
               }}
             ></input>
           </div>
-          */
-          }
+
           {/* 내용 업로드 부분 */}
           <div class="form-control w-full max-w-xs">
             <label class="label">
@@ -60,7 +65,7 @@ const PictureUploadPage = ({ post, setPost, nextId}) => {
           {/* 확인/취소 버튼 */}
           <div>
             <button class="btn mr-2">취소</button>
-            <button type="submit" class="btn">확인</button>
+            <button onClick="onSubmit" type="submit" class="btn">확인</button>
           </div>
         </form>
       </div>
