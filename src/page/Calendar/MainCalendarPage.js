@@ -3,9 +3,14 @@ import '../Calendar/Calendar.css';
 
 const MainCalenderPage = () => {
     return (
-        <div className="flex justify-center">
-           <Calendar/>
+      <>
+        <div className="border-y-4 ">
+           <Calendar />
         </div>
+        <div>
+
+        </div>
+        </>
       );
 };
 
