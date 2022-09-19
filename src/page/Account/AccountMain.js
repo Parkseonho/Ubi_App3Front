@@ -5,6 +5,7 @@ import food from "../../components/picture/food.svg"
 import hospital from "../../components/picture/hospital.svg"
 import toiletries from "../../components/picture/toiletries.svg"
 import other from "../../components/picture/other.svg"
+import Chart from "react-apexcharts";
 
 
 function AccountMain() {
@@ -20,7 +21,18 @@ function AccountMain() {
                         <button className="py-2 btn-outline w-2/4">예산관리</button>
                     </div>
                     <div>
-                        <Doughnut />
+
+                        <Chart
+                            type="pie"
+                            width={380}
+                            height={380}
+                            series={[350,330,332,555,109]}
+                            options={{
+                               labels:['병원비','스트레스해소','사료/식기','화장실 용품','기타 용품'],
+                               colors:['#FFCFCF','#FFEAA1','#ABB3FF','#D9BBFF','#C3EAFF']
+                            }}
+                        >
+                        </Chart>
                     </div>
 
 
