@@ -1,14 +1,7 @@
+import React from "react";
 
+const Login = () => {
+    return <div>로그인</div>;
+};
 
-
-
-
-
-const login = () => {
-    return (
-        <>
-        
-        </>
-    );
-  }
-export default login;
+export default Login;

@@ -10,6 +10,9 @@ import home from './picture/home.png';
 import person from './picture/person.png';
 import threeLine from './picture/threeLine.png';
 import MainCalenderPage from "../page/Calendar/MainCalendarPage";
+import {Link} from 'react-router-dom';
+import Join from "./Log/join";
+import Login from "./Log/login";
 
 
 const RouteTest = ({ posts, setPosts, nextId }) => {
@@ -19,6 +22,10 @@ const RouteTest = ({ posts, setPosts, nextId }) => {
 
     </div>
     <BrowserRouter>
+    <div>
+      <Link to="/Join">회원가입</Link>
+      <Link to="/Login">로그인</Link>
+    </div>
       <nav className='RouteXY flex justify-around items-center'>
         <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureList'>
           <img src={threeLine} alt="threeLine" className='inline h-8 w-10 ' />
@@ -39,6 +46,8 @@ const RouteTest = ({ posts, setPosts, nextId }) => {
         <Route path='/PictureMain' element={<PictureMain />} />
         <Route path='/AccountMain' element={<AccountMain />} />
         <Route path='/MainCalenderPage' element={<MainCalenderPage />} />
+        <Route path='/Login' element={<Login />} />
+        <Route path='/Join' element={<Join />} />
       </Routes>
     </BrowserRouter>
    
