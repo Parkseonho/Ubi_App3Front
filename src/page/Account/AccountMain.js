@@ -26,7 +26,7 @@ function AccountMain() {
                             type="pie"
                             width={380}
                             height={380}
-                            series={[350,330,332,555,109]}
+                            series={[1000000,30000,10000,50000,22000]}
                             options={{
                                labels:['병원비','스트레스해소','사료/식기','화장실 용품','기타 용품'],
                                colors:['#FFCFCF','#FFEAA1','#ABB3FF','#D9BBFF','#C3EAFF']
@@ -35,10 +35,10 @@ function AccountMain() {
                         </Chart>
                     </div>
 
+                    <img src={hospital} alt="hospital" className='mx-auto ' />
 
                     <img src={stress} alt="stress" className='mx-auto  ' />
                     <img src={food} alt="food" className='mx-auto  ' />
-                    <img src={hospital} alt="hospital" className='mx-auto ' />
                     <img src={toiletries} alt="toiletries" className='mx-auto ' />
                     <img src={other} alt="other" className='mx-auto ' />
                 </div>
