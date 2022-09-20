@@ -10,47 +10,49 @@ import home from './picture/home.png';
 import person from './picture/person.png';
 import threeLine from './picture/threeLine.png';
 import MainCalenderPage from "../page/Calendar/MainCalendarPage";
-import {Link} from 'react-router-dom';
-import Join from "./Log/join";
-import Login from "./Log/login";
+import { Link } from 'react-router-dom';
+import Join from "./Log/Join";
+import Login from "./Log/Login";
 
 
 const RouteTest = ({ posts, setPosts, nextId }) => {
   return (
     <>
-    <div className="HeaderSetting">
+      <div className="HeaderSetting">
 
-    </div>
-    <BrowserRouter>
-    <div>
-      <Link to="/Join">회원가입</Link>
-      <Link to="/Login">로그인</Link>
-    </div>
-      <nav className='RouteXY flex justify-around items-center'>
-        <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureList'>
-          <img src={threeLine} alt="threeLine" className='inline h-8 w-10 ' />
-        </NavLink>
-        <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/'>
-          <img src={home} alt="home" className='inline h-10 w-10' />
-        </NavLink>
+      </div>
+      <BrowserRouter>
+        <div>
+          <Link to="/Join">회원가입</Link>
+        </div>
+        <div>
+          <Link to="/Login">로그인</Link>
+        </div>
+        <nav className='RouteXY flex justify-around items-center'>
+          <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureList'>
+            <img src={threeLine} alt="threeLine" className='inline h-8 w-10 ' />
+          </NavLink>
+          <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/'>
+            <img src={home} alt="home" className='inline h-10 w-10' />
+          </NavLink>
 
-        <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/AccountMain'>
-        <img src={person} alt="person" className='inline h-10 w-10' />
-        </NavLink>
-      </nav>
+          <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/AccountMain'>
+            <img src={person} alt="person" className='inline h-10 w-10' />
+          </NavLink>
+        </nav>
 
-      <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route path='/PictureList' element={<PictureList />} posts={posts} setPosts={setPosts} />
-        <Route path='/PictureUpload' element={<PictureUpload />} posts={posts} setPosts={setPosts} nextId={nextId} />
-        <Route path='/PictureMain' element={<PictureMain />} />
-        <Route path='/AccountMain' element={<AccountMain />} />
-        <Route path='/MainCalenderPage' element={<MainCalenderPage />} />
-        <Route path='/Login' element={<Login />} />
-        <Route path='/Join' element={<Join />} />
-      </Routes>
-    </BrowserRouter>
-   
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route path='/PictureList' element={<PictureList />} posts={posts} setPosts={setPosts} />
+          <Route path='/PictureUpload' element={<PictureUpload />} posts={posts} setPosts={setPosts} nextId={nextId} />
+          <Route path='/PictureMain' element={<PictureMain />} />
+          <Route path='/AccountMain' element={<AccountMain />} />
+          <Route path='/MainCalenderPage' element={<MainCalenderPage />} />
+          <Route path='/Login' element={<Login />} />
+          <Route path='/Join' element={<Join />} />
+        </Routes>
+      </BrowserRouter>
+
     </>
   );
 }
