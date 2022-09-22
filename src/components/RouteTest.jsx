@@ -18,16 +18,13 @@ import Login from "./Log/Login";
 const RouteTest = ({ posts, setPosts, nextId }) => {
   return (
     <>
+    <BrowserRouter>
       <div className="HeaderSetting">
-
+      
       </div>
-      <BrowserRouter>
-        <div>
-          <Link to="/Join">회원가입</Link>
-        </div>
-        <div>
-          <Link to="/Login">로그인</Link>
-        </div>
+      
+      
+        
         <nav className='RouteXY flex justify-around items-center'>
           <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/PictureList'>
             <img src={threeLine} alt="threeLine" className='inline h-8 w-10 ' />
@@ -40,7 +37,9 @@ const RouteTest = ({ posts, setPosts, nextId }) => {
             <img src={person} alt="person" className='inline h-10 w-10' />
           </NavLink>
         </nav>
-
+        <div>
+          <Link to="/Login" >로그인</Link>
+        </div>
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route path='/PictureList' element={<PictureList />} posts={posts} setPosts={setPosts} />
@@ -51,6 +50,7 @@ const RouteTest = ({ posts, setPosts, nextId }) => {
           <Route path='/Login' element={<Login />} />
           <Route path='/Join' element={<Join />} />
         </Routes>
+       
       </BrowserRouter>
 
     </>
