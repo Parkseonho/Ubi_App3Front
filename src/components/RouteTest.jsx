@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Home from "../page/Home";
 import PictureList from "../page/Picture/PictureList";
@@ -13,9 +13,12 @@ import MainCalenderPage from "../page/Calendar/MainCalendarPage";
 import { Link } from 'react-router-dom';
 import Join from "./Log/Join";
 import Login from "./Log/Login";
+import { useRecoilState } from "recoil";
+import {userState} from "./recoil";
 
 
 const RouteTest = ({ posts, setPosts, nextId }) => {
+  const [user, setUser] = useRecoilState(userState);
   return (
     <>
     <BrowserRouter>
@@ -38,7 +41,10 @@ const RouteTest = ({ posts, setPosts, nextId }) => {
           </NavLink>
         </nav>
         <div>
-          <Link to="/Login" >로그인</Link>
+          <Link to="/Login" >로그인</Link> 
+        </div>
+        <div>
+          {user&&`안녕하세요${user.username}님`}
         </div>
         <Routes>
           <Route exact path='/' element={<Home />} />
